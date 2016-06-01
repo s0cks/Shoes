@@ -19,8 +19,8 @@ file "build.properties" withReader {
 }
 
 version = "${config.version}"
-group= "microbots"
-archivesBaseName = "microbots"
+group= "shoes"
+archivesBaseName = "shoes"
 
 minecraft {
     version = "${config.mc.version}-${config.forge.version}"
