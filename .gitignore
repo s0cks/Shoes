@@ -1,0 +1,13 @@
+/*
+/*/
+
+# Except These
+!/.gitignore
+!/build.gradle
+!/gradle
+!/gradlew
+!/gradlew.bat
+!/libs
+!/LICENSE.md
+!/README.md
+!/src
