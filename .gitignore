@@ -4,6 +4,7 @@
 # Except These
 !/.gitignore
 !/build.gradle
+!/build.properties
 !/gradle
 !/gradlew
 !/gradlew.bat
