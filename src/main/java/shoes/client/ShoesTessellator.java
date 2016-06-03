@@ -43,8 +43,8 @@ extends Tessellator {
   }
 
   public ShoesTessellator drawQuadOnFace(double x, double y, double z, EnumFacing face, int color, int alpha) {
-    int r = (color >> 16 & 0xFF);
-    int g = (color >> 8 & 0xFF);
+    int r = (color & 0xFF0000) >> 16;
+    int g = (color & 0xFF00) >> 8;
     int b = (color & 0xFF);
 
     VertexBuffer vb = this.getBuffer();
