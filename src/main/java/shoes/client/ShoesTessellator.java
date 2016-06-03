@@ -35,17 +35,17 @@ extends Tessellator {
     return this;
   }
 
-  public ShoesTessellator drawCubeAt(double x, double y, double z, int color, float alpha){
+  public ShoesTessellator drawCubeAt(double x, double y, double z, int color, int alpha){
     for(EnumFacing face : EnumFacing.values()){
       this.drawQuadOnFace(x, y, z, face, color, alpha);
     }
     return this;
   }
 
-  public ShoesTessellator drawQuadOnFace(double x, double y, double z, EnumFacing face, int color, float alpha) {
-    float r = ((color >> 16 & 0xFF) / 255);
-    float g = ((color >> 8 & 0xFF) / 255);
-    float b = ((color & 0xFF) / 255);
+  public ShoesTessellator drawQuadOnFace(double x, double y, double z, EnumFacing face, int color, int alpha) {
+    int r = (color >> 16 & 0xFF);
+    int g = (color >> 8 & 0xFF);
+    int b = (color & 0xFF);
 
     VertexBuffer vb = this.getBuffer();
     vb.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_COLOR);
