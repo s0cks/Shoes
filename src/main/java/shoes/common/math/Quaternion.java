@@ -1,5 +1,7 @@
 package shoes.common.math;
 
+import net.minecraft.client.renderer.GlStateManager;
+
 import javax.vecmath.Vector3f;
 
 public final class Quaternion{
@@ -35,6 +37,10 @@ public final class Quaternion{
     this.z /= factor;
     this.w /= factor;
     return this;
+  }
+
+  public void apply(){
+    GlStateManager.rotate(this.w, this.x, this.y, this.z);
   }
 
   public static Quaternion of(Vector3f vec, float angle){
